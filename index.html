@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bizup Quiz</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <!-- Page 1: Welcome Screen -->
+    <div id="welcome-screen">
+        <h1>Bizup Quiz</h1>
+        <h2>3 mai se 2 sahi jawab de.</h2>
+      <h3>100 Gb tak data free paye..</h3>
+        <!-- Illustration of 1GB mobile recharge free as winning prize -->
+        <button onclick="startQuiz()">Shuru Kare</button>
+    </div>
+
+    <!-- Page 2: Quiz 1 -->
+    <div id="quiz-1" style="display: none;">
+        <h2>Quiz 1: Bizup pe kis kis orders pe COD milti hai?</h2>
+        <!-- Options -->
+        <ol type="1">
+            <li><button id="quiz1-option1" onclick="checkAnswer('quiz1', 'option1')">Saare orders pe</button></li>
+            <li><button id="quiz1-option2" onclick="checkAnswer('quiz1', 'option2')">10,000 se upar ke order pe</button></li>
+            <li><button id="quiz1-option3" onclick="checkAnswer('quiz1', 'option3')">Sirf phele order pe</button></li>
+            <li><button id="quiz1-option4" onclick="checkAnswer('quiz1', 'option4')">Kisi bhi order pe nahi milta.</button></li>
+        </ol>
+        <!-- Message -->
+        <p id="message-quiz1"></p>
+        <!-- Next Quiz Button -->
+        <button onclick="nextQuiz('quiz-1', 'quiz-2')">Agla sawal</button>
+    </div>
+
+    <!-- Page 3: Quiz 2 -->
+    <div id="quiz-2" style="display: none;">
+        <h2>Quiz 2: Bizup apko fraud se kaise bachata hai?</h2>
+        <!-- Options -->
+        <ol type="1">
+            <li><button id="quiz2-option1" onclick="checkAnswer('quiz2', 'option1')">Saare sellers ko unki dukaan pe jake verify karke</button></li>
+            <li><button id="quiz2-option2" onclick="checkAnswer('quiz2', 'option2')">Maal packing se phele apko video call pe dhikake</button></li>
+            <li><button id="quiz2-option3" onclick="checkAnswer('quiz2', 'option3')">Maal na ane pe double paise wapis karke</button></li>
+            <li><button id="quiz2-option4" onclick="checkAnswer('quiz2', 'option4')">Ye tino chezo ko saath mai karke</button></li>
+        </ol>
+        <!-- Message -->
+        <p id="message-quiz2"></p>
+        <!-- Next Quiz Button -->
+        <button onclick="nextQuiz('quiz-2', 'quiz-3')">Agla sawal</button>
+    </div>
+
+    <!-- Page 4: Quiz 3 -->
+    <div id="quiz-3" style="display: none;">
+        <h2>Quiz 3: Aap Bizup se Kaise order laga sakte ho?</h2>
+        <!-- Options -->
+        <ol type="1">
+            <li><button id="quiz3-option1" onclick="checkAnswer('quiz3', 'option1')">Bizup seller se maal kharid ke apko bhejdeta hai</button></li>
+            <li><button id="quiz3-option2" onclick="checkAnswer('quiz3', 'option2')">Bizup app pe seller ke QR code ko scan karke</button></li>
+            <li><button id="quiz3-option3" onclick="checkAnswer('quiz3', 'option3')">Seller se direct baat karke apna order lagaye</button></li>
+        </ol>
+        <!-- Message -->
+        <p id="message-quiz3"></p>
+        <!-- Result Page Button -->
+        <button onclick="showResult()">Apna Result jane</button>
+    </div>
+
+    <!-- Page 5: Result Page -->
+    <div id="result-page" style="display: none;">
+        <!-- Winner Variant -->
+        <div id="winner-variant" style="display: none;">
+            <h2>Congratulations Aapne 1 GB Data jita hai!</h2>
+            <!-- Confetti -->
+            <p>1 GB free data pane ke liye apni shop, ya redi ya office ki photo upload kare.</p>
+            <input type="file" id="upload-photo">
+            <button onclick="uploadPhoto()">Upload</button>
+            <p id="upload-message"></p>
+        </div>
+        <!-- Losing Variant -->
+        <div id="losing-variant" style="display: none;">
+            <h2>Oh no!</h2>
+            <!-- Sad Emoji -->
+            <p>Nirash na ho Aap agle hafte firse try karsakte.</p>
+            <button>Reminder lagaye</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

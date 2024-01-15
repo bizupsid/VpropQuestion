@@ -1,0 +1,66 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f1de;
+    color: #e07a5f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 20px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+}
+
+h1, h2 {
+    color: #3d405b;
+}
+
+button {
+    background-color: #a38b48;
+    color: #f4f1de;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3d405b;
+}
+
+.correct {
+    background-color: #2a9d8f;
+}
+
+.incorrect {
+    background-color: #e76f51;
+}
+
+#result-page {
+    text-align: center;
+}
+
+#winner-variant {
+    color: #2a9d8f;
+}
+
+#losing-variant {
+    color: #e76f51;
+}
+
+/* Mobile Friendly Styles */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+}
