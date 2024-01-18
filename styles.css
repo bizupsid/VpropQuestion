@@ -15,6 +15,7 @@ body {
 
 h1, h2 {
     color: #3d405b;
+    margin: 0.5em 0; /* Reduced margin for headings */
 }
 
 button {
@@ -52,20 +53,26 @@ button:hover {
 /* Mobile adaptations */
 @media (max-width: 600px) {
     body {
-        font-size: 16px; /* Smaller font size for mobile */
+        font-size: 18px; /* Increased font size for better readability */
+        padding: 5%; /* Added padding to reduce white space */
     }
 
     h1, h2 {
-        font-size: 1.5em; /* Adjust heading sizes for mobile */
+        font-size: 2em; /* Increased heading sizes for mobile */
     }
 
     button {
-        padding: 8px 16px; /* Smaller buttons for mobile */
-        font-size: 14px; /* Smaller font size for buttons */
+        padding: 12px 24px; /* Larger buttons for easier interaction */
+        font-size: 18px; /* Increased font size for buttons */
     }
 
     #result-page, #winner-variant, #losing-variant {
         padding: 10px; /* Padding for better spacing on mobile */
         text-align: left; /* Align text to left for better readability */
+    }
+
+    div[id^="quiz-"] {
+        padding: 5%; /* Reduced white space in quiz sections */
+        text-align: left; /* Align text to left for consistency */
     }
 }
